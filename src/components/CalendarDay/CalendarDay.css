@@ -1,0 +1,105 @@
+.calendar-day {
+    text-align: center;
+    background-color: #e33052;
+    width: 180px;
+    height: 180px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    position: relative;
+}
+
+.calendar-day p {
+    font-size: 100px;
+    color: #ffffff;
+    position: relative;
+}
+
+.opened-day img {
+    /* animation */
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+
+    position: relative;
+    border: 1px solid #dddddd;
+    padding: 5px;
+    background-color: #888888;
+}
+
+.opened-day-no-central {
+    width: 130px;
+    height: 130px;
+    z-index: 100;
+}
+
+.opened-day-central {
+    width: 500px;
+    height: 500px;
+    z-index: 101;
+}
+
+
+.oou-text {
+    font-size: 20px;
+    padding: 5px;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    min-width: 100px;
+    border-radius: 10px;
+    background-color: white;
+    color: #e33052;
+}
+
+@-webkit-keyframes fadeout {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+    99% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.fadeout {
+    -webkit-animation: fadeout 3s linear;
+    visibility: hidden;
+}
+
+@-webkit-keyframes fadein {
+    0% {
+        opacity: 0;
+        visibility: visible;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fadein {
+    -webkit-animation: fadein 3s linear;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
